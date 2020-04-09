@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kpritam/gpr-playground/issues"
   },
-  "homepage": "https://github.com/kpritam/gpr-playground#readme"
+  "homepage": "https://github.com/kpritam/gpr-playground#readme",
+  "dependencies": {
+    "@kpritam/gpr-playground": "1.0.0"
+  }
 }
