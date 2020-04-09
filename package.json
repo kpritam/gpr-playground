@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kpritam/gpr-playground#readme",
   "dependencies": {
+    "@codertocat/hello-world-npm": "^1.0.2",
     "@kpritam/gpr-playground": "1.0.0"
   }
 }
