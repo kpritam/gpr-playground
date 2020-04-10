@@ -1,6 +1,6 @@
 {
   "name": "@kpritam/gpr-playground",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Github actions and packages playground",
   "main": "index.js",
   "scripts": {
