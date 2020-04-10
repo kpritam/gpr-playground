@@ -1,19 +1,31 @@
 name: Node.js Package
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "v*"
 jobs:
-  build:
+  js:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
           registry-url: "https://npm.pkg.github.com/"
 
       - run: npm publish
+        working-directory: "js"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  scala:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: olafurpg/setup-scala@v7
+        with:
+          java-version: adopt@1.11
+
+      - run: sbt publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
